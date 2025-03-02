@@ -5,13 +5,13 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
 public class UserRequest {
-    @Size(min = 3, max = 50, message = "User name must be at least 3 and 50 character")
-    @NotBlank(message = "User name can not blank")
+    @Size(min = 3, max = 50, message = "USERNAME_INVALID")
+    @NotBlank(message = "USER_NOT_BLANK")
     private String name;
     @NotBlank(message = "Email name can not blank")
     private String email;
-    @NotBlank(message = "User name can not blank")
-    @Size(min = 3, max =  50, message = "Password must be at least 3 and 50 character")
+    @NotBlank(message = "PASSWORD_NOT_BLANK")
+    @Size(min = 3, max =  50, message = "INVALID_PASSWORD")
     private  String password;
 
     public String getName() {
