@@ -1,5 +1,6 @@
 package org.example.spring_boot_core.controller;
 
+import jakarta.validation.Valid;
 import org.example.spring_boot_core.dto.request.UserRequest;
 import org.example.spring_boot_core.dto.request.UserUpdateRequest;
 import org.example.spring_boot_core.entity.User;
@@ -17,7 +18,7 @@ public class UserController {
     private UserService userService;
 
     @PostMapping()
-    User addUser(@RequestBody UserRequest request) {
+    User addUser(@RequestBody @Valid UserRequest request) {
         return  userService.createRequest(request);
     }
 
